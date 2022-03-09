@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import zoom_example.components.custom_canvas.CustomCanvas?>
+<?import zoom_example.components.slider_container.SliderContainer?>
+
+<BorderPane fx:id="view" prefHeight="768" prefWidth="1024" fx:controller="zoom_example.views.index.Index" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <StackPane>
+         <CustomCanvas fx:id="canvas" onScroll="#handleScroll" height="${view.height}" width="${view.width}" />
+         <SliderContainer fx:id="sliderContainer" canvas="$canvas" StackPane.alignment="TOP_RIGHT"/>
+      </StackPane>
+   </center>
+</BorderPane>
